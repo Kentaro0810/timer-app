@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>自分用タイマーアプリ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>自分用タイマー</h1>
+      <p>勉強・作業・休憩に使えるシンプルタイマー</p>
+    </header>
+
+    <section class="timer-card">
+      <div id="timerDisplay" class="timer-display">25:00</div>
+
+      <div class="progress-area">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+      <div class="time-setting">
+        <label for="minutesInput">時間を設定：</label>
+        <input id="minutesInput" type="number" min="1" max="180" value="25">
+        <span>分</span>
+        <button id="setButton">設定</button>
+      </div>
+
+      <div class="preset-buttons">
+        <button class="preset-button" data-minutes="5">5分</button>
+        <button class="preset-button" data-minutes="25">25分</button>
+        <button class="preset-button" data-minutes="50">50分</button>
+      </div>
+
+      <div class="main-buttons">
+        <button id="startButton">スタート</button>
+        <button id="pauseButton">一時停止</button>
+        <button id="resetButton">リセット</button>
+      </div>
+
+      <p id="statusMessage" class="status-message">準備OK</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
