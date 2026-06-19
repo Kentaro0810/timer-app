@@ -1,1 +1,178 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.app {
+  width: min(92%, 680px);
+  margin: 40px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.app-header p {
+  margin: 8px 0 0;
+  color: #6b7280;
+}
+
+.timer-card {
+  text-align: center;
+}
+
+.timer-display {
+  font-size: 72px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.progress-area {
+  width: 100%;
+  height: 16px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: #2563eb;
+  transition: width 0.3s;
+}
+
+.time-setting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+#minutesInput {
+  width: 90px;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+#minutesInput:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#setButton {
+  background: #4b5563;
+  color: white;
+}
+
+#setButton:hover {
+  background: #374151;
+}
+
+.preset-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.preset-button {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.preset-button:hover {
+  background: #bae6fd;
+}
+
+.main-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#startButton {
+  background: #2563eb;
+  color: white;
+}
+
+#startButton:hover {
+  background: #1d4ed8;
+}
+
+#pauseButton {
+  background: #f59e0b;
+  color: white;
+}
+
+#pauseButton:hover {
+  background: #d97706;
+}
+
+#resetButton {
+  background: #ef4444;
+  color: white;
+}
+
+#resetButton:hover {
+  background: #dc2626;
+}
+
+.status-message {
+  margin-top: 22px;
+  font-weight: bold;
+  color: #374151;
+}
+
+.finished {
+  color: #dc2626;
+}
+
+@media (max-width: 520px) {
+  .app {
+    margin: 24px auto;
+    padding: 18px;
+  }
+
+  .timer-display {
+    font-size: 54px;
+  }
+
+  .main-buttons button,
+  .preset-buttons button {
+    width: 100%;
+  }
+}
